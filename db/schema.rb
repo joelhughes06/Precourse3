@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140410230349) do
+ActiveRecord::Schema.define(version: 20140417155751) do
 
   create_table "titles", force: true do |t|
     t.string "title"
     t.string "year"
     t.text   "description"
     t.string "rated"
+    t.binary "image"
+    t.float  "stars"
+    t.text   "reviews"
   end
 
   create_table "user_affinities", force: true do |t|

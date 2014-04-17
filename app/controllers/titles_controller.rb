@@ -1,8 +1,10 @@
 class TitlesController < ApplicationController
+before_action :set_title, only: [:show]
+
 	def index
 		@titles = Title.all
 		if @titles
-			redirect_to '/'
+			render 'titles/index'
 		else
 			flash[:error] = 'No movies yet listed.'
 		end
