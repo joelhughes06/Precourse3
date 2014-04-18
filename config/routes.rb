@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root to: 'titles#index'
 
-  get '/titles', to: 'titles#index'
-  get '/show', to: 'titles#show'
+  #get '/titles', to: 'titles#index'
+  #get '/show', to: 'titles#show'
 
-
+  #get '/show/:id(.:format)', to: 'titles#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

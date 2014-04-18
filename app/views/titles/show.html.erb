@@ -22,7 +22,7 @@
 				<a href='' class='button-a'><input type="submit" value="Search" class='button-a' href='' ></a>
 			</a>
 			&nbsp;&nbsp;
-			<span class="span-c"; style="">Hello, <%= @user %>
+			<span class="span-c"; style="">Hello, <%= @user ? @user.username : "Guest" %>
 			</span>
 		</div>
 		<div id="content" style="background-color:#EEEEEE;height:100%;width:70%;float:left;">
@@ -35,10 +35,10 @@
 
 	<div>
 		<br/>
-		<b class="indent-a"><%= @title_title %></b>
+		<b class="indent-a"><%= @title.title %></b>
 		<br/>
 		<br/>
-		<text class="indent-a"><%= @title_description %></text>
+		<text class="indent-a"><%= @title.description %></text>
 		<br/>
 		<br/>
 		<a class="indent-a"><a href='' class='button-a'><input type="submit" value="Watch Now" class='button-a'></a>
