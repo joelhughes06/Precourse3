@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root to: 'titles#index'
 
   get '/titles', to: 'titles#index'
+  get '/show', to: 'titles#show'
 
 
 

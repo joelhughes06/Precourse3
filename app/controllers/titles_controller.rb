@@ -19,6 +19,11 @@ before_action :set_title, only: [:show]
 
 	def show
 		@title = Title.find(params[:id])
+		if @title
+			render 'titles/show'
+		else
+			flash[:error] = 'No movies yet listed.'
+		end
 	end
 
 	def edit
@@ -26,5 +31,12 @@ before_action :set_title, only: [:show]
 
 	def update
 	end
+
+	def set_title
+		@title = Title.find(1)
+
+	end
+
+
 
 end
