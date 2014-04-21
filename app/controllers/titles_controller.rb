@@ -3,11 +3,7 @@ before_action :set_title, only: [:show]
 
 	def index
 		@titles = Title.all
-		if @titles
-			render 'titles/index'
-		else
-			flash[:error] = 'No movies yet listed.'
-		end
+
 	end
 
 	def new
