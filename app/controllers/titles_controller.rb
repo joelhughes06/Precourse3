@@ -2,8 +2,8 @@ class TitlesController < ApplicationController
 before_action :set_title, only: [:show]
 
 	def index
-		@titles = Title.all
-		@categories = Category.all
+		@titles = Title.all.sort_by {|x| x.category}
+		@categories = Category.all.sort_by {|z| z.genre}.reverse
 	end
 
 	def new
@@ -30,7 +30,10 @@ before_action :set_title, only: [:show]
 
 	def set_title
 		@title = Title.find(1)
+	end
 
+	def match_catit
+		@titles.category == @categories.genre
 	end
 
 end

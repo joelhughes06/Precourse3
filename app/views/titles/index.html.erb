@@ -7,12 +7,17 @@
 <%= render 'shared/header_common' %>
 		<div id="content" class="white-bkg">
 			<p>	
+
 				<% @categories.each do |grouping| %>
 					<%= grouping.genre %>
-				<% end %>	
+				<% end %>
+
+
 				<% @titles.each do |grp| %>
 					<%= grp.category %>
-				<% end %>					
+				<% end %>	
+
+								
 							<br/>
 							<br/>
 								<% @titles.each do |poster|%>
