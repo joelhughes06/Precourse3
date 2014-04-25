@@ -5,28 +5,21 @@
 <body>
 <table style="width:100%">
 <%= render 'shared/header_common' %>
-		<div id="content" class="white-bkg">
-			<p>	
-
-				<% @categories.each do |grouping| %>
-					<%= grouping.genre %>
-				<% end %>
-
-
-				<% @titles.each do |grp| %>
-					<%= grp.category %>
-				<% end %>	
-
-								
-							<br/>
-							<br/>
-								<% @titles.each do |poster|%>
-									<form method='post'>
-										<a href='/titles/<%= poster.id %>'><img src='/<%= poster.small_image %>' style='height:200px' class="indent-a"></a>
-								<% end %>
-				<br/>
-			</p>
-		</div>
+	<div id="content" class="white-bkg">
+		<p>	
+			<% @categories.each do |category| %>
+				<%= category.genre %>
+					<br/>
+					<br/>					
+						<% category.titles.each do |poster|%>
+							<form method='post'>
+								<a href='/titles/<%= poster.id %>'><img src='/<%= poster.small_image %>' style='height:200px' class="indent-a"></a>
+						<% end %>
+					<br/>
+					<br/>
+			<% end %>
+			<br/>
+		</p>
 	</div>
 	<div id="footer" class="black-banner">
 		Copyright © VideoFliX
