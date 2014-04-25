@@ -3,6 +3,7 @@ before_action :set_title, only: [:show]
 
 	def index
 		@titles = Title.all
+		@categories = Category.all
 	end
 
 	def new

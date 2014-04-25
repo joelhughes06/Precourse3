@@ -5,36 +5,33 @@
 <body>
 <table style="width:100%">
 <%= render 'shared/header_common' %>
-
-		<p>
-			<% @categories.each do |grouping| %>
-					<%= grouping.genre %>
-			<% end %>
-
-		</p>
-
 		<div id="content" class="white-bkg">
-					<%= @categories %>
-						<p>
-							<% @titles.each do |poster| %>
-								<form method='post'>
-									<a href='/titles/<%= poster.id %>'><img src='/<%= poster.small_image %>' style='height:200px' class="indent-a"></a>
+			<p>	
+				<% @categories.each do |grouping| %>
+					<%= grouping.genre %>
+				<% end %>	
+				<% @titles.each do |grp| %>
+					<%= grp.category %>
+				<% end %>					
+							<br/>
+							<br/>
+								<% @titles.each do |poster|%>
+									<form method='post'>
+										<a href='/titles/<%= poster.id %>'><img src='/<%= poster.small_image %>' style='height:200px' class="indent-a"></a>
+								<% end %>
+				<br/>
+			</p>
+		</div>
+	</div>
+	<div id="footer" class="black-banner">
+		Copyright © VideoFliX
+	</div>
+</table>
+</body>
 
-							<% end %>
+
 				<!--			<form method='post'>
 								<img src='/mrpeabody.jpg'  style="display: block; margin: auto; height:375px">
 							</form>
 
 							-->
-						</p>
-		</div>
-
-	</div>
-
-	<div id="footer" class="black-banner">
-		Copyright © VideoFliX
-	</div>
-
-</table>
-
-</body>
