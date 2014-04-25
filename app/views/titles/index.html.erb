@@ -8,7 +8,7 @@
 	<div id="content" class="white-bkg">
 		<p>	
 			<% @categories.each do |category| %>
-				<%= category.genre %>
+				<a class='font-a'><%= category.genre %></a>
 					<br/>
 					<br/>					
 						<% category.titles.each do |poster|%>
@@ -26,10 +26,3 @@
 	</div>
 </table>
 </body>
-
-
-				<!--			<form method='post'>
-								<img src='/mrpeabody.jpg'  style="display: block; margin: auto; height:375px">
-							</form>
-
-							-->
