@@ -17,7 +17,9 @@
 	.my-span {color:white; font-family:helvetica; font-weight:bold; font-size:large; border:0px solid gray; width:25%; display:inline-block;}
 	.span-b {color:gray; font-family:arial; font-size:small; border:1px green; width:37.5%; display:inline-block;}
 	.span-c {color:white; font-family:helvetica; text-decoration:none; font-size:70%; display:inline-block; }
+	.span-a {margin-left: 50px}
 	.button-a {text-decoration:none; cursor:pointer}
 	.indent-a {margin-left:10px}
 	.plain-white-text {color:white;}
 	.black-banner {color:white;background-color:black;clear:both;text-align:center;height:100%;}
+	.white-bkg {background-color:#EEEEEE;height:100%;width:100%;float:left;}

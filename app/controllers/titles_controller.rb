@@ -3,7 +3,6 @@ before_action :set_title, only: [:show]
 
 	def index
 		@titles = Title.all
-
 	end
 
 	def new
@@ -32,7 +31,5 @@ before_action :set_title, only: [:show]
 		@title = Title.find(1)
 
 	end
-
-
 
 end
