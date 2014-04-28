@@ -9,8 +9,8 @@
 		<p>	
 			<% @categories.each do |category| %>
 				<a class='font-a'><%= category.genre %></a>
+					<hr width="98%" color='grey'>
 					<br/>
-					<br/>					
 						<% category.titles.each do |poster|%>
 							<form method='post'>
 								<a href='/titles/<%= poster.id %>'><img src='/<%= poster.small_image %>' style='height:200px' class="indent-a"></a>
