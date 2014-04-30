@@ -36,4 +36,8 @@ before_action :set_title, only: [:show]
 		@titles.category == @categories.genre
 	end
 
+	def search
+		@results = Title.search_by_title(params[:search_term])
+	end
+
 end

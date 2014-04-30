@@ -11,23 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140425191801) do
+ActiveRecord::Schema.define(version: 20140429151340) do
 
   create_table "categories", force: true do |t|
     t.string "genre"
   end
 
   create_table "titles", force: true do |t|
-    t.string "title"
-    t.string "year"
-    t.text   "description"
-    t.string "rated"
-    t.binary "image"
-    t.float  "stars"
-    t.text   "reviews"
-    t.binary "small_image"
-    t.string "category"
-    t.string "category_id"
+    t.string   "title"
+    t.string   "year"
+    t.text     "description"
+    t.string   "rated"
+    t.binary   "image"
+    t.float    "stars"
+    t.text     "reviews"
+    t.binary   "small_image"
+    t.string   "category"
+    t.string   "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "todos", force: true do |t|

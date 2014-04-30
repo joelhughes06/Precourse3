@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root to: 'titles#index'
 
+#  root to: 'todos#index'
+
   #get '/titles', to: 'titles#index'
   #get '/show', to: 'titles#show'
 
@@ -16,9 +18,25 @@ Rails.application.routes.draw do
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-  resources :titles, except: [:destroy]
-  resources :todos, except: [:destroy]
+#  resources :titles, except: [:destroy]
+ # resources :todos, except: [:destroy]
+  resources :todos, only: [:index] do 
+    collection do 
+      get 'search', to: 'todo#search'
+    end
+  
+    member do 
+      post 'highlight', to: 'todos#highlight'
+    end
+  end
+
   resources :categories, except: [:destroy]
+
+  resources :titles, only: [:show] do 
+    collection do 
+      get :search, to: "titles#search"
+    end
+  end
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
