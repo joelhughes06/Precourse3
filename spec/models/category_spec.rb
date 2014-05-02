@@ -23,7 +23,7 @@ end
 	describe "#recent_videos" do
 		it "returns the videos in the reverse chronological order by created_at" do
 			comedies=Category.create(genre: "comedies")
-			futurama=Title.create(title: "Futurama", description: "Space Travel", iuy: "1", created_at: 1.day.ago)
+			futurama=Title.create(title: "Futurama", description: "Space Travel", category_id: "1", created_at: 1.day.ago)
 			south_park=Title.create(title: "South Park", description: "Crazy kids", category_id: "1", created_at: 2.days.ago)
 			expect(comedies.recent_videos).to eq([south_park, futurama])
 		end
