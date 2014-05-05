@@ -1,0 +1,43 @@
+<head>
+<link rel='stylesheet' href='app/assets/stylesheets/application.css'>
+</head>
+
+<body>
+<table style="width:100%">
+<%= render 'shared/header_common' %>
+	<div id="content" class="white-bkg">
+		<p>	
+
+<%= form_for @login, builder: MyFormBuilder do |f| %>
+	<div class='login_block'>
+	<%= f.label :username %>
+	<%= f.text_field :username %>
+	</div>
+	<div class='login_block'>
+	<%= f.label :password %>
+	<%= f.text_field :password %>
+	</div>
+	<div class='login_block'>
+	<%= f.label :full_name %>
+	<%= f.label :full_name %>
+	</div>
+	<%= f.submit 'Sign Up' %>
+<% end %>
+
+		Email address <input class="text">
+		<br/>
+		Password <input class="text">
+		<br/>		
+		Full name <input class="text">
+		<br/>
+		<a href='' class='button-a'><input type="submit" value="Sign up" class='button-a' href='' ></a>
+		<br/>
+
+			<br/>
+		</p>
+	</div>
+	<div id="footer" class="black-banner">
+		Copyright © VideoFliX
+	</div>
+</table>
+</body>

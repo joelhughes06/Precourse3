@@ -38,6 +38,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users, except: [:destroy] do
+      get :sign_in, to: "users#sign_in"
+    end
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

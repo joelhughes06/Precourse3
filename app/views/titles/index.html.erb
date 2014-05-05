@@ -11,7 +11,7 @@
 				<a class='font-a'><%= category.genre %></a>
 					<hr width="98%" color='grey'>
 					<br/>
-						<% category.titles.each do |poster|%>
+						<% category.recent_videos.each do |poster|%>
 							<form method='post'>
 								<a href='/titles/<%= poster.id %>'><img src='/<%= poster.small_image %>' style='height:200px' class="indent-a"></a>
 						<% end %>
